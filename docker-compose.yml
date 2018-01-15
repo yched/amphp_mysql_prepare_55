@@ -1,0 +1,13 @@
+version: '2'
+services:
+
+  php:
+    image: composer:1.6.1
+    volumes:
+      - ./app:/app
+
+  db:
+    image: mysql:5.7.20
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db
